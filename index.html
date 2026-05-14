@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom & Send — Greeting Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-flower">🌸</span>
+        <span class="logo-text">Bloom <span>&amp;</span> Send</span>
+      </div>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-petals" aria-hidden="true">
+      <span>🌸</span><span>🌼</span><span>🌺</span><span>🌻</span>
+      <span>🌸</span><span>💐</span><span>🌹</span><span>🌼</span>
+    </div>
+    <div class="hero-content">
+      <p class="hero-sub">handcrafted with love</p>
+      <h1 class="hero-title">Send a Little<br/><em>Sunshine</em></h1>
+      <p class="hero-desc">Beautiful summer greeting cards for every occasion — birthdays, anniversaries, thank‑yous, and everything in between.</p>
+      <a href="#shop" class="btn btn-primary">Shop the Collection</a>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop" id="shop">
+    <div class="container">
+      <h2 class="section-title">Our Cards</h2>
+      <p class="section-sub">Click any card to preview it up close</p>
+      <div class="product-grid" id="productGrid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>🌸 Bloom &amp; Send &nbsp;·&nbsp; Made with love &nbsp;·&nbsp; <a href="mailto:hello@bloomsend.com">hello@bloomsend.com</a></p>
+  </footer>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-body">
+        <span class="modal-tag" id="modalTag"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <p class="modal-price" id="modalPrice"></p>
+        <div class="modal-qty">
+          <label for="modalQty">Qty</label>
+          <div class="qty-control">
+            <button class="qty-btn" id="qtyMinus">−</button>
+            <input type="number" id="modalQty" value="1" min="1" max="20" />
+            <button class="qty-btn" id="qtyPlus">+</button>
+          </div>
+        </div>
+        <button class="btn btn-primary modal-add-btn" id="modalAddBtn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="complementary" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- populated by JS -->
+    </div>
+    <div class="cart-empty" id="cartEmpty">
+      <span>🌼</span>
+      <p>Your cart is empty</p>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn">Checkout with Stripe</button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
