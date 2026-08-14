@@ -170,7 +170,7 @@ function renderCart() {
     const el = document.createElement('div');
     el.className = 'cart-item';
     el.innerHTML = `
-      <div class="cart-item-image" style="background:${item.gradient}"> <img class="card-img" src="${p.image}" alt="${p.name}" width="100%" height="100%" loading="lazy"></div>
+      <div class="cart-item-image" style="background:${item.gradient}"> <img class="card-img" src="${item.image}" alt="${item.name}" width="100%" height="100%" loading="lazy"></div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</div>
