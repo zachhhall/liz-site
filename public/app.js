@@ -50,7 +50,7 @@ function renderGrid() {
     card.setAttribute('aria-label', `View ${p.name}`);
     card.innerHTML = `
       <div class="card-image" style="background:${p.gradient}">
-        <span class="card-emoji">${p.emoji}</span>
+        <img class="card-img" src="${p.image}" alt="${p.name}" loading="lazy">
         <div class="card-image-overlay">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           Quick View
