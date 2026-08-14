@@ -50,7 +50,7 @@ function renderGrid() {
     card.setAttribute('aria-label', `View ${p.name}`);
     card.innerHTML = `
       <div class="card-image" style="background:${p.gradient}">
-        <img class="card-img" src="${p.image}" alt="${p.name}" width="25%" height="25%" loading="lazy">
+        <img class="card-img" src="${p.image}" alt="${p.name}" width="100%" height="100%" loading="lazy">
         <div class="card-image-overlay">
           Quick View
         </div>
