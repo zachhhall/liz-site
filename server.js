@@ -20,7 +20,7 @@ const PRODUCTS = [
     priceId: 'price_1QgILW01dncEQPi1JYuVBlhw',
     tag: 'Birthday',
     gradient: 'linear-gradient(135deg, #f9d423 0%, #f97316 100%)',
-    emoji: '🌻',
+    image: 'public/poo.jpg',
   },
   {
     id: 'summer-garden',
