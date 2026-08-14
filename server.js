@@ -14,10 +14,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 const PRODUCTS = [
   {
     id: 'sunflower-birthday',
-    name: 'Sunflower Birthday',
+    name: 'Winter Girl with Pooh 24',
     description: 'Bright sunflowers to make their birthday shine. Blank inside for your personal message.',
     price: 5.99,
-    priceId: 'price_REPLACE_SUNFLOWER_BIRTHDAY',
+    priceId: 'price_1QgILW01dncEQPi1JYuVBlhw',
     tag: 'Birthday',
     gradient: 'linear-gradient(135deg, #f9d423 0%, #f97316 100%)',
     emoji: '🌻',
