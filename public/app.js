@@ -76,7 +76,7 @@ function renderGrid() {
 function openModal(product) {
   activeProduct = product;
   modalImage.style.background = product.gradient;
-  modalImage.textContent = product.emoji;
+  modalImage.innerHTML = `<img src="${product.image}" alt="${product.name}" class="modal-img">`;
   modalTag.textContent = product.tag;
   modalTitle.textContent = product.name;
   modalDesc.textContent = product.description;
